@@ -25,20 +25,11 @@ export default class CircularProgress extends React.Component {
   }
 
   render() {
-<<<<<<< HEAD
     const { size, width, tintColor, backgroundColor, style, rotation, linecap, arcSweepAngle, children } = this.props;
-    const backgroundPath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, arcSweepAngle);
-
-    const fill = this.extractFill(this.props.fill);
-    const circlePath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, arcSweepAngle * fill / 100);
-=======
-    const { size, width, tintColor, backgroundColor, style, rotation, linecap, children } = this.props;
-    const backgroundPath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, 360 * .9999);
+    const backgroundPath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, arcSweepAngle * .9999);
 
     const fill = this.extractFill(this.props.fill);    
-    const circlePath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, (360 * .9999) * fill / 100);
->>>>>>> 91f15f5a5320c04d645352a629f2478873344f6d
-
+    const circlePath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, (arcSweepAngle * .9999) * fill / 100);
     return (
       <View style={style}>
         <Surface
